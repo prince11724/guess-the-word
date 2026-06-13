@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    font-family: Arial;
+}
+
+/* FIX BOX CENTER ALWAYS */
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    .top-bar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.home-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 26px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 999;
+}
+}
