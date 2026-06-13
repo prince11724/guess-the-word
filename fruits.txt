@@ -1,0 +1,5 @@
+apple|Crunchy fruit usually red or green
+banana|Yellow fruit rich in potassium
+mango|Sweet tropical fruit loved in summer
+orange|Citrus fruit rich in vitamin C
+grapes|Small juicy fruits growing in bunches

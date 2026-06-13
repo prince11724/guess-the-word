@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Guess Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            color: white;
+            font-family: Arial;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* SMALL HOME ICON TOP LEFT */
+        .home-icon {
+            position: static;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        input, button, select {
+            padding: 10px;
+            margin: 5px;
+            width: 80%;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            cursor: pointer;
+            background: #00c853;
+            color: white;
+        }
+
+        .danger { background: red; }
+        .hint { background: orange; }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HOME ICON BUTTON -->
+    <form method="POST">
+        <button class="home-icon" name="action" value="home">🏠</button>
+    </form>
+
+    <h2>🎮 Word Guess Game</h2>
+
+    <p>Level: {{ level }} | Score: {{ score }}</p>
+    <p>Attempts Left: {{ attempts }}</p>
+
+    <p style="color: yellow;">{{ message }}</p>
+
+    {% if not started %}
+    <form method="POST">
+        <select name="category">
+            <option value="names">Humans</option>
+            <option value="animals">Animals</option>
+            <option value="fruits">Fruits</option>
+            <option value="flowers">Flowers</option>
+        </select>
+        <button name="action" value="start">Start Game</button>
+    </form>
+    {% endif %}
+
+    {% if started %}
+
+    <form method="POST">
+        <input type="text" name="guess" placeholder="Enter your guess">
+        <button name="action" value="guess">Guess</button>
+    </form>
+
+    <form method="POST">
+        <button class="hint" name="action" value="hint">Hint</button>
+    </form>
+
+    <form method="POST">
+        <button class="danger" name="action" value="restart">Try Again</button>
+    </form>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

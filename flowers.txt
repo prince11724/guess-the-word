@@ -1,0 +1,5 @@
+rose|Fragrant flower often red with thorns
+lotus|Flower that grows in water bodies
+sunflower|Large yellow flower facing sunlight
+lily|Elegant flower with pleasant fragrance
+tulip|Colorful cup shaped flower

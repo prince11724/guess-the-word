@@ -1,0 +1,5 @@
+tiger|Large striped predator with sharp claws
+lion|Known as king of the jungle with loud roar
+elephant|Large animal with trunk and tusks
+rabbit|Small furry animal with long ears
+penguin|Black and white bird that cannot fly
